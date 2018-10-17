@@ -12,13 +12,13 @@ attr_reader :address, :rooms, :price
   end
 
   def rooms_from_category(symbol)
-    roomy = []
+    selection = []
     @rooms.each do |sym|
       if sym.category == symbol
-        roomy << sym
+        selection << sym
       end
     end
-      p roomy
+      p selection
   end
 
   def area
@@ -34,7 +34,13 @@ attr_reader :address, :rooms, :price
     cost = @price.tr('$', '0')
     x = cost.to_f / area
     p x.round(2)
-  end 
+  end
+
+  def rooms_sorted_by_area
+
+    @rooms.sort_by{|i| i.area}
+
+  end
 
 
 
