@@ -30,6 +30,12 @@ attr_reader :address, :rooms, :price
     p total
   end
 
+  def price_per_square_foot
+    cost = @price.tr('$', '0')
+    x = cost.to_f / area
+    p x.round(2)
+  end 
+
 
 
 end
