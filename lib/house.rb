@@ -12,10 +12,13 @@ attr_reader :address, :rooms, :price
   end
 
   def rooms_from_category(symbol)
-    @rooms.map do |sym|
-      sym.category.match(symbol)
+    roomy = []
+    @rooms.each do |sym|
+      if sym.category == symbol
+        roomy << sym
+      end
     end
-
+      p roomy
   end
 
   def area
