@@ -37,9 +37,11 @@ attr_reader :address, :rooms, :price
   end
 
   def rooms_sorted_by_area
-
     @rooms.sort_by{|i| i.area}
+  end
 
+  def rooms_by_category
+    @rooms.group_by{|i| i.category}
   end
 
 
