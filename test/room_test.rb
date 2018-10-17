@@ -22,7 +22,5 @@ class RoomTest <MiniTest::Test
     assert_equal 130, room.area
   end
 
-  
-
 
 end
