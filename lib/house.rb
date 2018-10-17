@@ -7,6 +7,10 @@ attr_reader :address, :rooms, :price
     @rooms = []
   end
 
+  def add_room(room)
+    @rooms << room
+  end
+
 
 
 
